@@ -1,5 +1,21 @@
-<h1>Contact#new_contact</h1>
-
-<p>
-  <%= @greeting %>, find me in app/views/contact_mailer/new_contact.html.erb
-</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+  <h1>New Contact Form Submission</h1>
+  <p>You have received a new message from your website contact form.</p>
+  <h2>Contact Details:</h2>
+  <ul>
+    <li><strong>Name:</strong> <%= @contact.name %></li>
+    <li><strong>Email:</strong> <%= @contact.email %></li>
+    <li><strong>Phone:</strong> <%= @contact.phone %></li>
+    <li><strong>Preferred Call Time:</strong> <%= @contact.preferred_call_time %></li>
+    <li><strong>Message:</strong></li>
+  </ul>
+  <p><%= simple_format(@contact.message) %></p>
+  <hr>
+  <p>This email was sent from your website contact form.</p>
+</body>
+</html>

@@ -1,3 +1,18 @@
-Contact#new_contact
+New Contact Form Submission
+===========================
 
-<%= @greeting %>, find me in app/views/contact_mailer/new_contact.text.erb
+You have received a new message from your website contact form.
+
+Contact Details:
+----------------
+Name: <%= @contact.name %>
+Email: <%= @contact.email %>
+Phone: <%= @contact.phone %>
+Preferred Call Time: <%= @contact.preferred_call_time %>
+
+Message:
+--------
+<%= @contact.message %>
+
+----------------
+This email was sent from your website contact form.
